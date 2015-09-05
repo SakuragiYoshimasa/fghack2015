@@ -14,6 +14,9 @@ public class SettingGUI : MonoBehaviour {
 
 	public GameObject waitingText;
 
+	public Text pointA;
+	public Text pointB;
+
 
 	// Use this for initialization
 	void Start () {
@@ -49,7 +52,7 @@ public class SettingGUI : MonoBehaviour {
 		}
 	}
 
-	public void StartGame(){
+	public void CheckStartGame(){
 		if(manager.RoomID != null && manager.TeamID != null && manager.getPlayer().Skill != null){
 
 			startButton.gameObject.SetActive(false);
@@ -67,4 +70,14 @@ public class SettingGUI : MonoBehaviour {
 		}
 	}
 
+	public void StartGame(){
+		waitingText.SetActive(false);
+		pointA.gameObject.SetActive(true);
+		pointB.gameObject.SetActive(true);
+	}
+
+	public void UpdatePoints(int pA,int pB){
+		pointA.text = "TeamA:" + pA.ToString();
+		pointB.text = "TeamB:" + pB.ToString();
+	}
 }

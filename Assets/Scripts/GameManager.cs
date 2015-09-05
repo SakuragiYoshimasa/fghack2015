@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class GameManager : MonoBehaviour {
 
 	enum GameState{
@@ -8,8 +9,8 @@ public class GameManager : MonoBehaviour {
 		WaitingStart,
 		GameMode
 	}
-	public int Width = 1920;
-	public int Height = 1080;
+	public int Width;
+	public int Height;
 	public int FPS = 30;
 
 	private GameState state;
@@ -21,12 +22,8 @@ public class GameManager : MonoBehaviour {
 
 	private SettingGUI gui;
 	public SettingGUI AllGUI{
-		get{
-			return gui;
-		}
-		set{
-			gui = value;
-		}
+		get{return gui;}
+		set{gui = value;}
 	}
 
 	private string roomID = "";
@@ -47,13 +44,45 @@ public class GameManager : MonoBehaviour {
 	{
 		state = GameState.Register;
 		player = new Player();
+		player.Init();
 		Width = Screen.width;
 		Height = Screen.height;
 		DontDestroyOnLoad(gameObject);
-	}
-	// Use this for initialization
-	void Start () {
 
+	}
+
+	ConnectParse parse;
+	
+	void Start()
+	{
+		parse = new ConnectParse(this, gameObject.AddComponent<MTHandler>());
+		
+		System.Action configAction = () =>
+		{
+			parse.Request(new CondConfigSync(), response =>
+			              {
+				CondConfigSync.R config = response as CondConfigSync.R;
+				Debug.Log("できたよ GameTime : " + config.GameTime);
+			}, error =>
+			{
+			});
+		};
+		
+		if (parse.IsLogIn)
+		{
+			Debug.Log("ログインしてるよ");
+			configAction();
+		}
+		else
+		{
+			parse.SignUp(System.Guid.NewGuid().ToString(), "asdf1234", "Hack", () =>
+			             {
+				configAction();
+			}, () =>
+			{
+				Debug.Log("できなかったよ");
+			});
+		}
 	}
 
 	public void WaitStartGame(){
@@ -64,16 +93,34 @@ public class GameManager : MonoBehaviour {
 	}
 
 	IEnumerator waitingGameStart(){
-		WaitForSeconds wait = new WaitForSeconds(0.5f);
-		int i = 0;
-		while(!CheckStartGame()){
-			Debug.Log((i++).ToString());
-			yield return wait;
-			if(i > 2){
-				break;
-			}
+
+		bool flag = false;
+
+		parse.Request(new CondRegister(1234, 0), response => //room id ,team
+			             {
+			Debug.Log("Register");
+
+			parse.Request(new CondStart(), res =>
+			              {
+				Debug.Log("Start");
+				flag = true;
+			}, error =>
+			{
+				Debug.LogError("Start");
+			});
+
+
+		}, error =>
+		{
+			Debug.LogError("Register");
+		});
+			
+		while(!flag){
+
+			yield return null;
+
 		}
-		AllGUI.waitingText.SetActive(false);
+		AllGUI.StartGame();
 		StartGame();
 	} 
 
@@ -96,13 +143,23 @@ public class GameManager : MonoBehaviour {
 			Debug.Log("No devices");
 			return;
 		}
+		StartCoroutine("Check");
+	}
+
+
+	 IEnumerator Check(){
+		WaitForSeconds wait = new WaitForSeconds(2.0f);
+		while(state == GameState.GameMode){
+			Utils.Check(player);
+			yield return wait;
+		}
 	}
 
 	// Update is called once per frame
 	void Update () {
 		if(state == GameState.GameMode){
-
-
+			
+			player.Update();
 		}
 	}
 }

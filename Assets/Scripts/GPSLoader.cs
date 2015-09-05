@@ -26,7 +26,7 @@ public class GPSLoader : MonoBehaviour {
 			Utils.lang = Input.location.lastData.longitude;
 			Utils.alti = Input.location.lastData.altitude;
 
-			print("Location: " + 
+			 Debug.Log("Location: " + 
 			      Input.location.lastData.latitude + " " + 
 			      Input.location.lastData.longitude + " " + 
 			      Input.location.lastData.altitude + " " + 

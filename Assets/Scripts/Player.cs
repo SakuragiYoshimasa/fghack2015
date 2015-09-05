@@ -30,11 +30,12 @@ public class Player {
 
 	public void Update(){
 		//playerTransform.position = new Vector3(Utils.lat,Utils.lang,0);
+
 	}
 
 	//--------------------------------------------------
 	//GestureAttack
-	//--------------------------------------------------
+	//-------------------s-------------------------------
 	private void Attack(){
 
 	}

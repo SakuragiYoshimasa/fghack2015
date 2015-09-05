@@ -39,7 +39,7 @@ public class Ctrl : MonoBehaviour
 
     public void OnRegisterClick()
     {
-        parse.Request(new CondRegister(1234, 0), response =>
+        parse.Request(new CondRegister(1234, 0,0,0), response =>
             {
                 Debug.Log("Register");
             }, error =>

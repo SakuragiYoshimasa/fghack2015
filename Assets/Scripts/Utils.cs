@@ -25,11 +25,34 @@ public static class Utils {
 		return false;
 	}
 
-	public static void Check(Player player){
+
+
+	public static void Check(Player player,ConnectParse parse){
 		//---------------------------------
 		//Check Information and put that into player
 		//---------------------------------
-		player.GenerateEnemy(0,Enemy.MonsterType.Dragon,0,-10);
+		//player.GenerateEnemy(0,Enemy.MonsterType.Dragon,0,-10);
 
+		bool hit = false;
+		int enemyID = 0;
+		parse.Request(new CondCheck(hit, enemyID), response =>
+		              {
+			CondCheck.R res = response as CondCheck.R;
+			foreach (CondCheck.EnemyInfo info in res.EnemyList)
+			{
+				Debug.Log("enemy id : " + info.id);
+			}
+			
+			foreach (CondCheck.TeamInfo info in res.TeamList)
+			{
+				Debug.Log("team id : " + info.id);
+			}
+			
+			Debug.Log("Check");
+		}, error =>
+		{
+			Debug.LogError("Check");
+		});
+		
 	}
 }

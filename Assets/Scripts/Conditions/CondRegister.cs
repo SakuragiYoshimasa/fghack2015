@@ -14,11 +14,18 @@ public class CondRegister : CondBase
 
     public int Team { get; private set; }
 
-    public CondRegister(int roomID, int team)
+	public double Latitde{get; private set;}
+
+	public double Longitude{get; private set;}
+
+    public CondRegister(int roomID, int team,double lat,double longi)
         : base(true, true)
     {
         RoomID = roomID;
         Team = team;
+		Latitde = lat;
+		Longitude = longi;
+
     }
 
     protected override Dictionary<string, object> CreateParams()
@@ -27,6 +34,8 @@ public class CondRegister : CondBase
         {
             { "roomID", RoomID },
             { "team", Team },
+			{"lat",Latitde},
+			{"lon",Longitude}
         };
     }
 }

@@ -1,0 +1,974 @@
+fileFormatVersion: 2
+guid: a9a14e6cb075aec42b195bc9d2a7fb6f
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Bone01
+    100002: Bone02
+    100004: Bone03
+    100006: Bone04
+    100008: Bone05
+    100010: Bone06
+    100012: Bone07
+    100014: Bone08
+    100016: Bone09
+    100018: Bone10
+    100020: Bone11
+    100022: Bone12
+    100024: Bone13
+    100026: Bone14
+    100028: Bone15
+    100030: Bone22
+    100032: Bone23
+    100034: Bone24
+    100036: Bone25
+    100038: Bone26
+    100040: Bone27
+    100042: Bone28
+    100044: Bone29
+    100046: Bone30
+    100048: Bone31
+    100050: Bone32
+    100052: Bone33
+    100054: Bone34
+    100056: Bone35
+    100058: Bone36
+    100060: Bone37
+    100062: Bone38
+    100064: Bone39
+    100066: Bone40
+    100068: Bone41
+    100070: Bone42
+    100072: Bone43
+    100074: Bone44
+    100076: Bone45
+    100078: Bone46
+    100080: Bone47
+    100082: Bone48
+    100084: Bone49
+    100086: Bone50
+    100088: Character01
+    100090: Dummy01
+    100092: Dummy02
+    100094: Dummy03
+    100096: Dummy04
+    100098: Dummy05
+    100100: Dummy06
+    100102: Dummy07
+    100104: Dummy08
+    100106: Dummy09
+    100108: IK Chain01
+    100110: IK Chain02
+    100112: IK Chain03
+    100114: IK Chain04
+    100116: IK Chain05
+    100118: IK Chain06
+    100120: IK Chain07
+    100122: IK Chain08
+    100124: //RootNode
+    100126: treasure_turtle_dragon
+    400000: Bone01
+    400002: Bone02
+    400004: Bone03
+    400006: Bone04
+    400008: Bone05
+    400010: Bone06
+    400012: Bone07
+    400014: Bone08
+    400016: Bone09
+    400018: Bone10
+    400020: Bone11
+    400022: Bone12
+    400024: Bone13
+    400026: Bone14
+    400028: Bone15
+    400030: Bone22
+    400032: Bone23
+    400034: Bone24
+    400036: Bone25
+    400038: Bone26
+    400040: Bone27
+    400042: Bone28
+    400044: Bone29
+    400046: Bone30
+    400048: Bone31
+    400050: Bone32
+    400052: Bone33
+    400054: Bone34
+    400056: Bone35
+    400058: Bone36
+    400060: Bone37
+    400062: Bone38
+    400064: Bone39
+    400066: Bone40
+    400068: Bone41
+    400070: Bone42
+    400072: Bone43
+    400074: Bone44
+    400076: Bone45
+    400078: Bone46
+    400080: Bone47
+    400082: Bone48
+    400084: Bone49
+    400086: Bone50
+    400088: Character01
+    400090: Dummy01
+    400092: Dummy02
+    400094: Dummy03
+    400096: Dummy04
+    400098: Dummy05
+    400100: Dummy06
+    400102: Dummy07
+    400104: Dummy08
+    400106: Dummy09
+    400108: IK Chain01
+    400110: IK Chain02
+    400112: IK Chain03
+    400114: IK Chain04
+    400116: IK Chain05
+    400118: IK Chain06
+    400120: IK Chain07
+    400122: IK Chain08
+    400124: //RootNode
+    400126: treasure_turtle_dragon
+    4300000: treasure_turtle_dragon
+    7400000: Idle
+    7400002: Walk
+    7400004: Run
+    7400006: Attack
+    7400008: Dead
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: treasure_turtle_dragon
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Character01
+        weight: 1
+      - path: Character01/Dummy02
+        weight: 1
+      - path: Character01/Dummy02/Bone04
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone01
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone01/Bone02
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone01/Bone02/Bone03
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone01/Bone02/Bone22
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone01/Bone02/Bone22/Bone23
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone05
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone05/Bone06
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone07
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone07/Bone08
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone07/Bone08/Bone09
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10/Bone11
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10/Bone11/Bone12
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10/Bone11/Bone12/Bone13
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10/Bone11/Bone14
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10/Bone11/Bone14/Bone15
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone24
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone24/Bone25
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone24/Bone25/Bone26
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone27
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone27/Bone28
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone27/Bone28/Bone29
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone30
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone30/Bone31
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone30/Bone31/Bone32
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33/Bone34
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33/Bone34/Bone35
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33/Bone34/Bone35/Bone36
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33/Bone34/Bone37
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33/Bone34/Bone37/Bone38
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39/Bone40
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39/Bone40/Bone41
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39/Bone40/Bone41/Bone42
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39/Bone40/Bone43
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39/Bone40/Bone43/Bone44
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45/Bone46
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45/Bone46/Bone47
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45/Bone46/Bone47/Bone48
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45/Bone46/Bone49
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45/Bone46/Bone49/Bone50
+        weight: 1
+      - path: Character01/Dummy02/Dummy01
+        weight: 1
+      - path: Character01/Dummy02/Dummy01/IK Chain02
+        weight: 1
+      - path: Character01/Dummy02/Dummy03
+        weight: 1
+      - path: Character01/Dummy02/Dummy03/IK Chain01
+        weight: 1
+      - path: Character01/Dummy02/Dummy04
+        weight: 1
+      - path: Character01/Dummy02/Dummy04/IK Chain04
+        weight: 1
+      - path: Character01/Dummy02/Dummy05
+        weight: 1
+      - path: Character01/Dummy02/Dummy05/IK Chain03
+        weight: 1
+      - path: Character01/Dummy02/Dummy06
+        weight: 1
+      - path: Character01/Dummy02/Dummy06/IK Chain07
+        weight: 1
+      - path: Character01/Dummy02/Dummy07
+        weight: 1
+      - path: Character01/Dummy02/Dummy07/IK Chain08
+        weight: 1
+      - path: Character01/Dummy02/Dummy08
+        weight: 1
+      - path: Character01/Dummy02/Dummy08/IK Chain06
+        weight: 1
+      - path: Character01/Dummy02/Dummy09
+        weight: 1
+      - path: Character01/Dummy02/Dummy09/IK Chain05
+        weight: 1
+      - path: treasure_turtle_dragon
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Walk
+      takeName: Take 001
+      firstFrame: 34
+      lastFrame: 61
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Character01
+        weight: 1
+      - path: Character01/Dummy02
+        weight: 1
+      - path: Character01/Dummy02/Bone04
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone01
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone01/Bone02
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone01/Bone02/Bone03
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone01/Bone02/Bone22
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone01/Bone02/Bone22/Bone23
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone05
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone05/Bone06
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone07
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone07/Bone08
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone07/Bone08/Bone09
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10/Bone11
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10/Bone11/Bone12
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10/Bone11/Bone12/Bone13
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10/Bone11/Bone14
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10/Bone11/Bone14/Bone15
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone24
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone24/Bone25
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone24/Bone25/Bone26
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone27
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone27/Bone28
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone27/Bone28/Bone29
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone30
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone30/Bone31
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone30/Bone31/Bone32
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33/Bone34
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33/Bone34/Bone35
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33/Bone34/Bone35/Bone36
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33/Bone34/Bone37
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33/Bone34/Bone37/Bone38
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39/Bone40
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39/Bone40/Bone41
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39/Bone40/Bone41/Bone42
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39/Bone40/Bone43
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39/Bone40/Bone43/Bone44
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45/Bone46
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45/Bone46/Bone47
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45/Bone46/Bone47/Bone48
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45/Bone46/Bone49
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45/Bone46/Bone49/Bone50
+        weight: 1
+      - path: Character01/Dummy02/Dummy01
+        weight: 1
+      - path: Character01/Dummy02/Dummy01/IK Chain02
+        weight: 1
+      - path: Character01/Dummy02/Dummy03
+        weight: 1
+      - path: Character01/Dummy02/Dummy03/IK Chain01
+        weight: 1
+      - path: Character01/Dummy02/Dummy04
+        weight: 1
+      - path: Character01/Dummy02/Dummy04/IK Chain04
+        weight: 1
+      - path: Character01/Dummy02/Dummy05
+        weight: 1
+      - path: Character01/Dummy02/Dummy05/IK Chain03
+        weight: 1
+      - path: Character01/Dummy02/Dummy06
+        weight: 1
+      - path: Character01/Dummy02/Dummy06/IK Chain07
+        weight: 1
+      - path: Character01/Dummy02/Dummy07
+        weight: 1
+      - path: Character01/Dummy02/Dummy07/IK Chain08
+        weight: 1
+      - path: Character01/Dummy02/Dummy08
+        weight: 1
+      - path: Character01/Dummy02/Dummy08/IK Chain06
+        weight: 1
+      - path: Character01/Dummy02/Dummy09
+        weight: 1
+      - path: Character01/Dummy02/Dummy09/IK Chain05
+        weight: 1
+      - path: treasure_turtle_dragon
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Run
+      takeName: Take 001
+      firstFrame: 62
+      lastFrame: 77
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Character01
+        weight: 1
+      - path: Character01/Dummy02
+        weight: 1
+      - path: Character01/Dummy02/Bone04
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone01
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone01/Bone02
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone01/Bone02/Bone03
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone01/Bone02/Bone22
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone01/Bone02/Bone22/Bone23
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone05
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone05/Bone06
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone07
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone07/Bone08
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone07/Bone08/Bone09
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10/Bone11
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10/Bone11/Bone12
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10/Bone11/Bone12/Bone13
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10/Bone11/Bone14
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10/Bone11/Bone14/Bone15
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone24
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone24/Bone25
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone24/Bone25/Bone26
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone27
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone27/Bone28
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone27/Bone28/Bone29
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone30
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone30/Bone31
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone30/Bone31/Bone32
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33/Bone34
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33/Bone34/Bone35
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33/Bone34/Bone35/Bone36
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33/Bone34/Bone37
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33/Bone34/Bone37/Bone38
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39/Bone40
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39/Bone40/Bone41
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39/Bone40/Bone41/Bone42
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39/Bone40/Bone43
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39/Bone40/Bone43/Bone44
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45/Bone46
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45/Bone46/Bone47
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45/Bone46/Bone47/Bone48
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45/Bone46/Bone49
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45/Bone46/Bone49/Bone50
+        weight: 1
+      - path: Character01/Dummy02/Dummy01
+        weight: 1
+      - path: Character01/Dummy02/Dummy01/IK Chain02
+        weight: 1
+      - path: Character01/Dummy02/Dummy03
+        weight: 1
+      - path: Character01/Dummy02/Dummy03/IK Chain01
+        weight: 1
+      - path: Character01/Dummy02/Dummy04
+        weight: 1
+      - path: Character01/Dummy02/Dummy04/IK Chain04
+        weight: 1
+      - path: Character01/Dummy02/Dummy05
+        weight: 1
+      - path: Character01/Dummy02/Dummy05/IK Chain03
+        weight: 1
+      - path: Character01/Dummy02/Dummy06
+        weight: 1
+      - path: Character01/Dummy02/Dummy06/IK Chain07
+        weight: 1
+      - path: Character01/Dummy02/Dummy07
+        weight: 1
+      - path: Character01/Dummy02/Dummy07/IK Chain08
+        weight: 1
+      - path: Character01/Dummy02/Dummy08
+        weight: 1
+      - path: Character01/Dummy02/Dummy08/IK Chain06
+        weight: 1
+      - path: Character01/Dummy02/Dummy09
+        weight: 1
+      - path: Character01/Dummy02/Dummy09/IK Chain05
+        weight: 1
+      - path: treasure_turtle_dragon
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Attack
+      takeName: Take 001
+      firstFrame: 78
+      lastFrame: 98
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Character01
+        weight: 1
+      - path: Character01/Dummy02
+        weight: 1
+      - path: Character01/Dummy02/Bone04
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone01
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone01/Bone02
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone01/Bone02/Bone03
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone01/Bone02/Bone22
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone01/Bone02/Bone22/Bone23
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone05
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone05/Bone06
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone07
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone07/Bone08
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone07/Bone08/Bone09
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10/Bone11
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10/Bone11/Bone12
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10/Bone11/Bone12/Bone13
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10/Bone11/Bone14
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10/Bone11/Bone14/Bone15
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone24
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone24/Bone25
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone24/Bone25/Bone26
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone27
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone27/Bone28
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone27/Bone28/Bone29
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone30
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone30/Bone31
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone30/Bone31/Bone32
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33/Bone34
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33/Bone34/Bone35
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33/Bone34/Bone35/Bone36
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33/Bone34/Bone37
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33/Bone34/Bone37/Bone38
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39/Bone40
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39/Bone40/Bone41
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39/Bone40/Bone41/Bone42
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39/Bone40/Bone43
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39/Bone40/Bone43/Bone44
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45/Bone46
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45/Bone46/Bone47
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45/Bone46/Bone47/Bone48
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45/Bone46/Bone49
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45/Bone46/Bone49/Bone50
+        weight: 1
+      - path: Character01/Dummy02/Dummy01
+        weight: 1
+      - path: Character01/Dummy02/Dummy01/IK Chain02
+        weight: 1
+      - path: Character01/Dummy02/Dummy03
+        weight: 1
+      - path: Character01/Dummy02/Dummy03/IK Chain01
+        weight: 1
+      - path: Character01/Dummy02/Dummy04
+        weight: 1
+      - path: Character01/Dummy02/Dummy04/IK Chain04
+        weight: 1
+      - path: Character01/Dummy02/Dummy05
+        weight: 1
+      - path: Character01/Dummy02/Dummy05/IK Chain03
+        weight: 1
+      - path: Character01/Dummy02/Dummy06
+        weight: 1
+      - path: Character01/Dummy02/Dummy06/IK Chain07
+        weight: 1
+      - path: Character01/Dummy02/Dummy07
+        weight: 1
+      - path: Character01/Dummy02/Dummy07/IK Chain08
+        weight: 1
+      - path: Character01/Dummy02/Dummy08
+        weight: 1
+      - path: Character01/Dummy02/Dummy08/IK Chain06
+        weight: 1
+      - path: Character01/Dummy02/Dummy09
+        weight: 1
+      - path: Character01/Dummy02/Dummy09/IK Chain05
+        weight: 1
+      - path: treasure_turtle_dragon
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Dead
+      takeName: Take 001
+      firstFrame: 100
+      lastFrame: 140
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Character01
+        weight: 1
+      - path: Character01/Dummy02
+        weight: 1
+      - path: Character01/Dummy02/Bone04
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone01
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone01/Bone02
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone01/Bone02/Bone03
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone01/Bone02/Bone22
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone01/Bone02/Bone22/Bone23
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone05
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone05/Bone06
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone07
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone07/Bone08
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone07/Bone08/Bone09
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10/Bone11
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10/Bone11/Bone12
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10/Bone11/Bone12/Bone13
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10/Bone11/Bone14
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone10/Bone11/Bone14/Bone15
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone24
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone24/Bone25
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone24/Bone25/Bone26
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone27
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone27/Bone28
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone27/Bone28/Bone29
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone30
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone30/Bone31
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone30/Bone31/Bone32
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33/Bone34
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33/Bone34/Bone35
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33/Bone34/Bone35/Bone36
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33/Bone34/Bone37
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone33/Bone34/Bone37/Bone38
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39/Bone40
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39/Bone40/Bone41
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39/Bone40/Bone41/Bone42
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39/Bone40/Bone43
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone39/Bone40/Bone43/Bone44
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45/Bone46
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45/Bone46/Bone47
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45/Bone46/Bone47/Bone48
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45/Bone46/Bone49
+        weight: 1
+      - path: Character01/Dummy02/Bone04/Bone45/Bone46/Bone49/Bone50
+        weight: 1
+      - path: Character01/Dummy02/Dummy01
+        weight: 1
+      - path: Character01/Dummy02/Dummy01/IK Chain02
+        weight: 1
+      - path: Character01/Dummy02/Dummy03
+        weight: 1
+      - path: Character01/Dummy02/Dummy03/IK Chain01
+        weight: 1
+      - path: Character01/Dummy02/Dummy04
+        weight: 1
+      - path: Character01/Dummy02/Dummy04/IK Chain04
+        weight: 1
+      - path: Character01/Dummy02/Dummy05
+        weight: 1
+      - path: Character01/Dummy02/Dummy05/IK Chain03
+        weight: 1
+      - path: Character01/Dummy02/Dummy06
+        weight: 1
+      - path: Character01/Dummy02/Dummy06/IK Chain07
+        weight: 1
+      - path: Character01/Dummy02/Dummy07
+        weight: 1
+      - path: Character01/Dummy02/Dummy07/IK Chain08
+        weight: 1
+      - path: Character01/Dummy02/Dummy08
+        weight: 1
+      - path: Character01/Dummy02/Dummy08/IK Chain06
+        weight: 1
+      - path: Character01/Dummy02/Dummy09
+        weight: 1
+      - path: Character01/Dummy02/Dummy09/IK Chain05
+        weight: 1
+      - path: treasure_turtle_dragon
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

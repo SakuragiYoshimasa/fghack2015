@@ -96,7 +96,9 @@ public class GameManager : MonoBehaviour {
 
 		bool flag = false;
 
-		parse.Request(new CondRegister(1234, 0), response => //room id ,team
+		//35.665123,139.739511
+
+		parse.Request(new CondRegister(1234, 0,35.665123,139.739511), response => //room id ,team
 			             {
 			Debug.Log("Register");
 
@@ -150,7 +152,7 @@ public class GameManager : MonoBehaviour {
 	 IEnumerator Check(){
 		WaitForSeconds wait = new WaitForSeconds(2.0f);
 		while(state == GameState.GameMode){
-			Utils.Check(player);
+			Utils.Check(player,parse);
 			yield return wait;
 		}
 	}

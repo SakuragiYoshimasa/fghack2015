@@ -39,9 +39,11 @@ public class Player {
 					GameObject.Destroy(monsters[index]);
 				}
 				monsters[index] = GameObject.Instantiate(manager.GetMonster(type));
+				monsters[index].transform.position = new Vector3(position.x,position.y,position.z);
 			}
 		}else{
 			monsters[index] = GameObject.Instantiate(manager.GetMonster(type)) as GameObject;
+			monsters[index].transform.position = new Vector3(position.x,position.y,position.z);
 		}
 	
 		enemies[index] = new Enemy(id,type,position.x,position.z);
@@ -52,10 +54,11 @@ public class Player {
 	public void Update(){
 
 		manager.camera.transform.position = Utils.GetPosition(Utils.lat,Utils.lang);
+
 		attackable = false;
 		for(int i = 0; i < monsters.Length; i++){
 			if(monsters[i] != null && enemies[i] != null){
-				monsters[i].transform.position = new Vector3((float)enemies[i].X,0f,(float)enemies[i].Y);
+				//monsters[i].transform.position = new Vector3((float)enemies[i].X,0f,(float)enemies[i].Y);
 					//Utils.GetPosition(Utils.lat,Utils.lang + 0.0001f * i);
 					//new Vector3((float)enemies[i].X,0f,(float)enemies[i].Y);
 				if(Utils.InAttackRange(manager.camera.transform.position,monsters[i].transform.position,manager.camera.transform.rotation.eulerAngles)){
@@ -67,8 +70,9 @@ public class Player {
 		//Debug.Log("update");
 		Quaternion rotRH = Input.gyro.attitude;
 		Quaternion rot = new Quaternion(-rotRH.x, -rotRH.z, -rotRH.y, rotRH.w);
+		//#if UNITY_IPHONE
 		rot *= Quaternion.Euler(90f, 0f, 0f);
-		
+		//#endif
 		manager.camera.transform.localRotation = rot;
 		//Debug.Log(rot.eulerAngles);
 

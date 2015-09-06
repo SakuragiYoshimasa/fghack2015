@@ -27,9 +27,9 @@ public static class Utils {
 	}*/
 
 	public static Vector3 GetPosition(float lat,float lon){
-		float x = lat;
+		float x = lat *  10.0f;
 			//* 111.000f * 1000.000f;
-		float z = lon;
+		float z = lon * 10.0f;
 			//* 111.000f * 1000.000f;
 		return new Vector3((float)x,0f,(float)z);
 	}

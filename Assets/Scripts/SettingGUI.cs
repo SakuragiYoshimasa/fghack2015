@@ -10,6 +10,8 @@ public class SettingGUI : MonoBehaviour {
 	public Toggle[] skillToggles;
 	public Button startButton;
 
+	public Button gameStartButton;
+
 	public GameManager manager;
 
 	public GameObject waitingText;
@@ -72,7 +74,15 @@ public class SettingGUI : MonoBehaviour {
 		}
 	}
 
+	public void WaitingMode(){
+		gameStartButton.gameObject.SetActive(true);
+	}
+	public void gameStart(){
+		manager.state = GameManager.GameState.GameMode;
+	}
+
 	public void StartGame(){
+		gameStartButton.gameObject.SetActive(false);
 		waitingText.SetActive(false);
 		pointA.gameObject.SetActive(true);
 		pointB.gameObject.SetActive(true);
@@ -84,7 +94,7 @@ public class SettingGUI : MonoBehaviour {
 	}
 
 	public void SetInstruction(){
-		Debug.Log("Activate");
+		//Debug.Log("Activate");
 		instructionImage.gameObject.SetActive(true);
 
 	}

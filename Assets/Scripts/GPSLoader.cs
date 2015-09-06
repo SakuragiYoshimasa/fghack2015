@@ -4,6 +4,11 @@ using System.Collections;
 public class GPSLoader : MonoBehaviour {
 	IEnumerator Start() {
 		if (!Input.location.isEnabledByUser) {
+			Utils.lat =  135.001f;
+			Utils.lang = 110.132f;
+			#if UNITY_EDITOR 
+			Utils.getLocation = true;
+			#endif
 			Debug.Log("No permission");
 			yield break;
 		}
@@ -22,9 +27,10 @@ public class GPSLoader : MonoBehaviour {
 			yield break;
 		} else {
 			while(true){
+				Utils.getLocation = true;
 				yield return new WaitForSeconds(1f);
-				Utils.lat =  Mathf.Lerp((float)Utils.lat,Input.location.lastData.latitude,0.9f);
-				Utils.lang = Mathf.Lerp((float)Utils.lang,Input.location.lastData.longitude,0.9f);
+				Utils.lat =  Input.location.lastData.latitude;
+				Utils.lang = Input.location.lastData.longitude;
 				//Utils.alti = Input.location.lastData.altitude;
 
 				 Debug.Log("Location: " + 
@@ -35,6 +41,10 @@ public class GPSLoader : MonoBehaviour {
 				      Input.location.lastData.timestamp);
 			}
 		}
+		Input.location.Stop();
+	}
+
+	void OnDestroy(){
 		Input.location.Stop();
 	}
 }

@@ -19,12 +19,12 @@ public static class Utils {
 
 	}
 
-	/*public static bool CheckStartGame(){
+	public static bool CheckStartGame(){
 		//---------------------------------
 		//check api here
 		//---------------------------------
 		return false;
-	}*/
+	}
 
 	public static Vector3 GetPosition(float lat,float lon){
 		float x = lat ;

@@ -96,7 +96,6 @@ public class SettingGUI : MonoBehaviour {
 	public void SetInstruction(){
 		//Debug.Log("Activate");
 		instructionImage.gameObject.SetActive(true);
-
 	}
 
 	public void AnactivateImage(){

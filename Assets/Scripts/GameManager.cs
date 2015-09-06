@@ -72,9 +72,15 @@ public class GameManager : MonoBehaviour {
 
 	ConnectParse parse;
 	
-	void Start()
-	{
+	void Start(){
+		//Invoke("Init",2.0f);
 		parse = new ConnectParse(this, gameObject.AddComponent<MTHandler>());
+		//parse.LogOut();
+	
+
+	//void Init()
+	//{
+		
 		
 		System.Action configAction = () =>
 		{
@@ -86,7 +92,7 @@ public class GameManager : MonoBehaviour {
 			{
 			});
 		};
-		parse.LogOut();
+		
 		if (parse.IsLogIn)
 		{
 			Debug.Log("ログインしてるよ");
@@ -156,9 +162,9 @@ public class GameManager : MonoBehaviour {
 		StartGame();
 	} 
 
-	/*private bool CheckStartGame(){
+	private bool CheckStartGame(){
 		return Utils.CheckStartGame();
-	}*/
+	}
 
 	private void StartGame(){
 		Debug.Log("started");

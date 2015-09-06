@@ -1,19 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Enemy  {
+public class Enemy{
 
 	public enum MonsterType{
+		Zipper,
+		Goblin,
 		Dragon
 	}
 
-	private MonsterType type;
+	public MonsterType type;
 
 	private double x;
 	private double y;
 
 	public double X{
-		get{return X;}
+		get{return x;}
 		set{x = value;}
 	}
 	

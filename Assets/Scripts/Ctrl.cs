@@ -39,7 +39,7 @@ public class Ctrl : MonoBehaviour
 
     public void OnRegisterClick()
     {
-        parse.Request(new CondRegister(1234, 0), response =>
+        parse.Request(new CondRegister(1234, 0, 123.456, 123.456), response =>
             {
                 Debug.Log("Register");
             }, error =>
@@ -62,9 +62,10 @@ public class Ctrl : MonoBehaviour
 
     public void OnCheckClick()
     {
-        bool hit = false;
-        int enemyID = 0;
-        parse.Request(new CondCheck(hit, enemyID), response =>
+        string hitEnemyID = "asdf";
+        bool isSuccessGesture = true;
+
+        parse.Request(new CondCheck(hitEnemyID, isSuccessGesture), response =>
             {
                 CondCheck.R res = response as CondCheck.R;
                 foreach (CondCheck.EnemyInfo info in res.EnemyList)

@@ -17,6 +17,8 @@ public class SettingGUI : MonoBehaviour {
 	public Text pointA;
 	public Text pointB;
 
+	public Image instructionImage;
+
 
 	// Use this for initialization
 	void Start () {
@@ -79,5 +81,14 @@ public class SettingGUI : MonoBehaviour {
 	public void UpdatePoints(int pA,int pB){
 		pointA.text = "TeamA:" + pA.ToString();
 		pointB.text = "TeamB:" + pB.ToString();
+	}
+
+	public void SetInstruction(){
+		instructionImage.gameObject.SetActive(true);
+
+	}
+
+	public void AnactivateImage(){
+		instructionImage.gameObject.SetActive(false);
 	}
 }

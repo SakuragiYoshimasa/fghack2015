@@ -9,7 +9,8 @@ public class ConnectParse : ConnectBase
 {
     const float TIMEOUT_SECS = 60;
     const int SC_OK = 0;
-    const int SC_NG = 1000;
+    const int SC_IN_WAITING = 1000;
+    const int SC_NG = 9000;
 
     Item currentItem;
     bool running;
@@ -188,35 +189,49 @@ public class ConnectParse : ConnectBase
                 Dictionary<string, object> result = t.Result;
                 CheckCloudCodeStatus(t, result, code =>
                     {
-                        IList<object> enemies = result["enemies"] as IList<object>;
                         List<CondCheck.EnemyInfo> enemyList = new List<CondCheck.EnemyInfo>();
-                        foreach (object o in enemies)
-                        {
-                            Dictionary<string, object> enemy = o as Dictionary<string, object>;
-
-                            CondCheck.EnemyInfo info = new CondCheck.EnemyInfo();
-                            enemyList.Add(info);
-
-                            info.id = enemy["id"].ToString();
-                            info.type = int.Parse(enemy["type"].ToString());
-                            info.lat = double.Parse(enemy["lat"].ToString());
-                            info.lon = double.Parse(enemy["lon"].ToString());
-                        }
-
-                        IList<object> teams = result["team"] as IList<object>;
                         List<CondCheck.TeamInfo> teamList = new List<CondCheck.TeamInfo>();
-                        foreach (object o in teams)
+
+                        bool running = false;
+                        switch (code)
                         {
-                            Dictionary<string, object> team = o as Dictionary<string, object>;
+                            case SC_OK:
+                                {
+                                    IList<object> enemies = result["enemies"] as IList<object>;
+                                    foreach (object o in enemies)
+                                    {
+                                        Dictionary<string, object> enemy = o as Dictionary<string, object>;
 
-                            CondCheck.TeamInfo info = new CondCheck.TeamInfo();
-                            teamList.Add(info);
+                                        CondCheck.EnemyInfo info = new CondCheck.EnemyInfo();
+                                        enemyList.Add(info);
 
-                            info.id = int.Parse(team["id"].ToString());
-                            info.point = int.Parse(team["point"].ToString());
+                                        info.id = enemy["id"].ToString();
+                                        info.type = int.Parse(enemy["type"].ToString());
+                                        info.lat = double.Parse(enemy["lat"].ToString());
+                                        info.lon = double.Parse(enemy["lon"].ToString());
+                                    }
+
+                                    IList<object> teams = result["team"] as IList<object>;
+                                    foreach (object o in teams)
+                                    {
+                                        Dictionary<string, object> team = o as Dictionary<string, object>;
+
+                                        CondCheck.TeamInfo info = new CondCheck.TeamInfo();
+                                        teamList.Add(info);
+
+                                        info.id = int.Parse(team["id"].ToString());
+                                        info.point = int.Parse(team["point"].ToString());
+                                    }
+                                }
+                                running = true;
+                                break;
+
+                            case SC_IN_WAITING:
+                                break;
                         }
 
-                        response(new CondCheck.R(enemyList, teamList, cond));
+
+                        response(new CondCheck.R(running, enemyList, teamList, cond));
                     }, response);
             });
     }

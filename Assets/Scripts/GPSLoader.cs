@@ -22,7 +22,7 @@ public class GPSLoader : MonoBehaviour {
 			yield break;
 		} else {
 			while(true){
-				yield return new WaitForSeconds(0.5f);
+				yield return new WaitForSeconds(1f);
 				Utils.lat =  Mathf.Lerp((float)Utils.lat,Input.location.lastData.latitude,0.9f);
 				Utils.lang = Mathf.Lerp((float)Utils.lang,Input.location.lastData.longitude,0.9f);
 				//Utils.alti = Input.location.lastData.altitude;

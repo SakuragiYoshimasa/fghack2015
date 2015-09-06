@@ -171,6 +171,7 @@ public class GameManager : MonoBehaviour {
 	 IEnumerator Check(){
 		WaitForSeconds wait = new WaitForSeconds(2.0f);
 		while(state == GameState.GameMode){
+
 			yield return wait;
 			Utils.Check(player,parse);
 		
@@ -182,6 +183,9 @@ public class GameManager : MonoBehaviour {
 		if(state == GameState.GameMode){
 			
 			player.Update();
+			if(player.attackable){
+				AllGUI.SetInstruction();
+			}
 		}
 	}
 }

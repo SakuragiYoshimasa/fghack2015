@@ -19,6 +19,7 @@ public class Player {
 
 	public GameManager manager;
 
+	public bool attackable = false;
 	public bool attacked = false;
 	
 	public void Init(GameManager m){
@@ -51,21 +52,26 @@ public class Player {
 	public void Update(){
 
 		manager.camera.transform.position = Utils.GetPosition(Utils.lat,Utils.lang);
-
+		attackable = false;
 		for(int i = 0; i < monsters.Length; i++){
 			if(monsters[i] != null && enemies[i] != null){
 				monsters[i].transform.position = Utils.GetPosition(Utils.lat,Utils.lang + 0.0001f * i);
 					//new Vector3((float)enemies[i].X,0f,(float)enemies[i].Y);
+				if(Utils.InAttackRange(manager.camera.transform.position,monsters[i].transform.position)){
+					attackable = true;
+				}
 			}
 
 		}
 		Debug.Log("update");
 		Quaternion rotRH = Input.gyro.attitude;
 		Quaternion rot = new Quaternion(-rotRH.x, -rotRH.z, -rotRH.y, rotRH.w);
-		rot *= Quaternion.Euler(90f, 0f, 0f);
+		//rot *= Quaternion.Euler(90f, 0f, 0f);
 		
 		manager.camera.transform.localRotation = rot;
 		Debug.Log(rot.eulerAngles);
+
+
 	}
 
 	//--------------------------------------------------

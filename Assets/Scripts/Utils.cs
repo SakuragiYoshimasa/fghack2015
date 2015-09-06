@@ -63,7 +63,7 @@ public static class Utils {
 		////////////////////////////////////
 		//player.GenerateMonster();
 		////////////////////////////////////
-		///////////////////////////////////////
+		////////////////////////////////////
 		/// 
 		/// 
 		/// //35.665123,139.739511
@@ -72,5 +72,18 @@ public static class Utils {
 				//lat + 0.0001 * i,lang + 0.0001 * i));
 			//player.GenerateMonster(i,Enemy.MonsterType.Dragon,GetPosition(1,10));
 		}
+	}
+
+	public static bool InAttackRange(Vector3 p0,Vector3 p1){
+		var heading = p0 - p1;
+		var distance = heading.magnitude;
+		var direction = heading / distance;
+		Debug.Log("check");
+		Debug.Log(heading.sqrMagnitude);
+		Debug.Log(Mathf.Abs(Vector3.Angle(Vector3.zero,heading)));
+		if (heading.sqrMagnitude <  50 * 50 && Mathf.Abs(Vector3.Angle(Vector3.zero,heading)) < 120.0f && Mathf.Abs(Vector3.Angle(Vector3.zero,heading)) > 60.0f) {
+			return true;
+		}
+		return false;
 	}
 }

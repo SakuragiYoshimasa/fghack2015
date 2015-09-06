@@ -74,14 +74,14 @@ public static class Utils {
 		}
 	}
 
-	public static bool InAttackRange(Vector3 p0,Vector3 p1){
+	public static bool InAttackRange(Vector3 p0,Vector3 p1,Vector3 camAngle){
 		var heading = p0 - p1;
 		var distance = heading.magnitude;
 		var direction = heading / distance;
 		Debug.Log("check");
 		Debug.Log(heading.sqrMagnitude);
 		Debug.Log(Mathf.Abs(Vector3.Angle(Vector3.zero,heading)));
-		if (heading.sqrMagnitude <  50 * 50 && Mathf.Abs(Vector3.Angle(Vector3.zero,heading)) < 120.0f && Mathf.Abs(Vector3.Angle(Vector3.zero,heading)) > 60.0f) {
+		if (heading.sqrMagnitude <  50 * 50 && Mathf.Abs(Vector3.Angle(Vector3.zero,heading) - camAngle.y) < 120.0f && Mathf.Abs(Vector3.Angle(Vector3.zero,heading) - camAngle.y) > 60.0f) {
 			return true;
 		}
 		return false;

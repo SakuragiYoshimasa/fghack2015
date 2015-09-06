@@ -57,7 +57,7 @@ public class Player {
 			if(monsters[i] != null && enemies[i] != null){
 				monsters[i].transform.position = Utils.GetPosition(Utils.lat,Utils.lang + 0.0001f * i);
 					//new Vector3((float)enemies[i].X,0f,(float)enemies[i].Y);
-				if(Utils.InAttackRange(manager.camera.transform.position,monsters[i].transform.position)){
+				if(Utils.InAttackRange(manager.camera.transform.position,monsters[i].transform.position,manager.camera.transform.rotation.eulerAngles)){
 					attackable = true;
 				}
 			}

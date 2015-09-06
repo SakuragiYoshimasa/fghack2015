@@ -32,19 +32,19 @@ public class Player {
 
 	}
 
-	public void GenerateMonster(int id,Enemy.MonsterType type,Vector3 position){
-		if(enemies[id] != null){
-			 if(type != enemies[id].type){
-				if(monsters[id] != null){
-					GameObject.Destroy(monsters[id]);
+	public void GenerateMonster(string id,Enemy.MonsterType type,Vector3 position,int index){
+		if(enemies[index] != null){
+			 if(type != enemies[index].type){
+				if(monsters[index] != null){
+					GameObject.Destroy(monsters[index]);
 				}
-				monsters[id] = GameObject.Instantiate(manager.GetMonster(type));
+				monsters[index] = GameObject.Instantiate(manager.GetMonster(type));
 			}
 		}else{
-			monsters[id] = GameObject.Instantiate(manager.GetMonster(type)) as GameObject;
+			monsters[index] = GameObject.Instantiate(manager.GetMonster(type)) as GameObject;
 		}
 	
-		enemies[id] = new Enemy(id,type,position.x,position.z);
+		enemies[index] = new Enemy(id,type,position.x,position.z);
 
 	}
 	
@@ -55,7 +55,8 @@ public class Player {
 		attackable = false;
 		for(int i = 0; i < monsters.Length; i++){
 			if(monsters[i] != null && enemies[i] != null){
-				monsters[i].transform.position = Utils.GetPosition(Utils.lat,Utils.lang + 0.0001f * i);
+				monsters[i].transform.position = new Vector3((float)enemies[i].X,0f,(float)enemies[i].Y);
+					//Utils.GetPosition(Utils.lat,Utils.lang + 0.0001f * i);
 					//new Vector3((float)enemies[i].X,0f,(float)enemies[i].Y);
 				if(Utils.InAttackRange(manager.camera.transform.position,monsters[i].transform.position,manager.camera.transform.rotation.eulerAngles)){
 					attackable = true;
@@ -63,13 +64,13 @@ public class Player {
 			}
 
 		}
-		Debug.Log("update");
+		//Debug.Log("update");
 		Quaternion rotRH = Input.gyro.attitude;
 		Quaternion rot = new Quaternion(-rotRH.x, -rotRH.z, -rotRH.y, rotRH.w);
-		//rot *= Quaternion.Euler(90f, 0f, 0f);
+		rot *= Quaternion.Euler(90f, 0f, 0f);
 		
 		manager.camera.transform.localRotation = rot;
-		Debug.Log(rot.eulerAngles);
+		//Debug.Log(rot.eulerAngles);
 
 
 	}

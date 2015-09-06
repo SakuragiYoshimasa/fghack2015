@@ -193,10 +193,12 @@ public class ConnectParse : ConnectBase
                         List<CondCheck.TeamInfo> teamList = new List<CondCheck.TeamInfo>();
 
                         bool running = false;
+                        int time = 0;
                         switch (code)
                         {
                             case SC_OK:
                                 {
+                                    time = int.Parse(result["time"].ToString());
                                     IList<object> enemies = result["enemies"] as IList<object>;
                                     foreach (object o in enemies)
                                     {
@@ -231,7 +233,7 @@ public class ConnectParse : ConnectBase
                         }
 
 
-                        response(new CondCheck.R(running, enemyList, teamList, cond));
+                        response(new CondCheck.R(running, time, enemyList, teamList, cond));
                     }, response);
             });
     }

@@ -6,6 +6,7 @@ public static class Utils {
 	public static float lat = 0;
 	public static float lang = 0;
 	public static double alti = 0;
+	public static bool getLocation = false;
 
 	public static Type GetComponent<Type>(string name){
 		return GameObject.Find(name).GetComponent<Type>();
@@ -38,27 +39,35 @@ public static class Utils {
 		//Check Information and put that into player
 		//---------------------------------
 		//player.GenerateEnemy(0,Enemy.MonsterType.Dragon,0,-10);
-
-	/*bool hit = false;
+		Debug.Log("willCheck");
+		//bool hit = false;
 		int enemyID = 0;
-		parse.Request(new CondCheck(hit, enemyID), response =>
+		parse.Request(new CondCheck("a", true), response =>
 		              {
 			CondCheck.R res = response as CondCheck.R;
-			foreach (CondCheck.EnemyInfo info in res.EnemyList)
-			{
-				Debug.Log("enemy id : " + info.id);
+			//res.Running game state
+			if(res.Running){
+				int i = 0;
+				foreach (CondCheck.EnemyInfo info in res.EnemyList)
+				{
+					Debug.Log("enemy id : " + info.id);
+					player.GenerateMonster(info.id,(Enemy.MonsterType)info.type,GetPosition((float)info.lat,(float)info.lon),i);
+					i++;
+				}
+				
+				foreach (CondCheck.TeamInfo info in res.TeamList)
+				{
+					Debug.Log("team id : " + info.id);
+				}
+
+
 			}
-			
-			foreach (CondCheck.TeamInfo info in res.TeamList)
-			{
-				Debug.Log("team id : " + info.id);
-			}
-			
-			Debug.Log("Check");
+		
+			Debug.Log("Check:" + res.Running.ToString());
 		}, error =>
 		{
 			Debug.LogError("Check");
-		});*/
+		});
 		////////////////////////////////////
 		////////////////////////////////////
 		//player.GenerateMonster();
@@ -68,7 +77,7 @@ public static class Utils {
 		/// 
 		/// //35.665123,139.739511
 		for(int i = 0; i < 5; i++){
-			player.GenerateMonster(i,(Enemy.MonsterType)0,GetPosition(lat,lang + 0.0001f * i));
+			//player.GenerateMonster(i,(Enemy.MonsterType)0,GetPosition(lat,lang + 0.0001f * i));
 				//lat + 0.0001 * i,lang + 0.0001 * i));
 			//player.GenerateMonster(i,Enemy.MonsterType.Dragon,GetPosition(1,10));
 		}
@@ -78,9 +87,9 @@ public static class Utils {
 		var heading = p0 - p1;
 		var distance = heading.magnitude;
 		var direction = heading / distance;
-		Debug.Log("check");
-		Debug.Log(heading.sqrMagnitude);
-		Debug.Log(Mathf.Abs(Vector3.Angle(Vector3.zero,heading)));
+	//	Debug.Log("check");
+	//	Debug.Log(heading.sqrMagnitude);
+	//	Debug.Log(Mathf.Abs(Vector3.Angle(Vector3.zero,heading)));
 		if (heading.sqrMagnitude <  50 * 50 && Mathf.Abs(Vector3.Angle(Vector3.zero,heading) - camAngle.y) < 120.0f && Mathf.Abs(Vector3.Angle(Vector3.zero,heading) - camAngle.y) > 60.0f) {
 			return true;
 		}

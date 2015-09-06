@@ -24,10 +24,13 @@ public class CondCheck : CondBase
 
         public List<TeamInfo> TeamList;
 
-        public R(bool running, List<EnemyInfo> enemyList, List<TeamInfo> teamList, CondBase cond)
+        public int Time;
+
+        public R(bool running, int time, List<EnemyInfo> enemyList, List<TeamInfo> teamList, CondBase cond)
             : base(cond)
         {
             Running = running;
+            Time = time;
             EnemyList = enemyList;
             TeamList = teamList;
         }

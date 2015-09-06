@@ -4,7 +4,7 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour {
 
-	enum GameState{
+	public enum GameState{
 		Register,
 		WaitingStart,
 		GameMode
@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour {
 	public int Height;
 	public int FPS = 30;
 
-	private GameState state;
+	public GameState state;
 
 	private Player player;
 	public Player getPlayer(){
@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour {
 			{
 			});
 		};
-		
+		parse.LogOut();
 		if (parse.IsLogIn)
 		{
 			Debug.Log("ログインしてるよ");
@@ -116,19 +116,13 @@ public class GameManager : MonoBehaviour {
 		bool flag = false;
 
 		//35.665123,139.739511
+		while(Utils.getLocation == false){
+			yield return new WaitForSeconds(0.5f);
+		}
 
-		parse.Request(new CondRegister(1234, 0,35.665123,139.739511), response => //room id ,team
+		parse.Request(new CondRegister(int.Parse(roomID), teamID,Utils.lat,Utils.lang), response => //room id ,team
 			             {
 			Debug.Log("Register");
-
-			parse.Request(new CondStart(), res =>
-			              {
-				Debug.Log("Start");
-				flag = true;
-			}, error =>
-			{
-				Debug.LogError("Start");
-			});
 
 
 		}, error =>
@@ -136,11 +130,28 @@ public class GameManager : MonoBehaviour {
 			Debug.LogError("Register");
 		});
 			
-		while(!flag){
 
+		AllGUI.WaitingMode();
+
+		while(state != GameState.GameMode){
 			yield return null;
-
 		}
+
+		parse.Request(new CondStart(), res =>
+		              {
+			Debug.Log("Start");
+			flag = true;
+		}, error =>
+		{
+			Debug.LogError("Start");
+		});
+
+		while(!flag){
+			
+			yield return null;
+			
+		}
+		
 		AllGUI.StartGame();
 		StartGame();
 	} 
@@ -169,6 +180,7 @@ public class GameManager : MonoBehaviour {
 
 
 	 IEnumerator Check(){
+		Debug.Log("checkCheck");
 		WaitForSeconds wait = new WaitForSeconds(2.0f);
 		while(state == GameState.GameMode){
 

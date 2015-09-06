@@ -78,7 +78,9 @@ public class Player {
 	//GestureAttack
 	//-------------------s-------------------------------
 	private void Attack(){
+		if(attackable){
 
+		}
 	}
 
 	//--------------------------------------------------

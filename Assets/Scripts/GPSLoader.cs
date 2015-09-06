@@ -28,7 +28,7 @@ public class GPSLoader : MonoBehaviour {
 		} else {
 			while(true){
 				Utils.getLocation = true;
-				yield return new WaitForSeconds(1f);
+				yield return new WaitForSeconds(5f);
 				Utils.lat =  Input.location.lastData.latitude;
 				Utils.lang = Input.location.lastData.longitude;
 				//Utils.alti = Input.location.lastData.altitude;

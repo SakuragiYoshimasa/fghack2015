@@ -18,11 +18,17 @@ public static class Utils {
 
 	}
 
-	public static bool CheckStartGame(){
+	/*public static bool CheckStartGame(){
 		//---------------------------------
 		//check api here
 		//---------------------------------
 		return false;
+	}*/
+
+	public static Vector3 GetPosition(double lat,double lon){
+		double x = lat * 111 * 1000;
+		double z = lon * 111 * 1000;
+		return new Vector3((float)x,0f,(float)z);
 	}
 
 
@@ -33,7 +39,7 @@ public static class Utils {
 		//---------------------------------
 		//player.GenerateEnemy(0,Enemy.MonsterType.Dragon,0,-10);
 
-		bool hit = false;
+	/*bool hit = false;
 		int enemyID = 0;
 		parse.Request(new CondCheck(hit, enemyID), response =>
 		              {
@@ -52,7 +58,19 @@ public static class Utils {
 		}, error =>
 		{
 			Debug.LogError("Check");
-		});
-		
+		});*/
+		////////////////////////////////////
+		////////////////////////////////////
+		//player.GenerateMonster();
+		////////////////////////////////////
+		///////////////////////////////////////
+		/// 
+		/// 
+		/// //35.665123,139.739511
+		for(int i = 0; i < 5; i++){
+			player.GenerateMonster(i,(Enemy.MonsterType)0,GetPosition(lat,lang + 0.0001 * i));
+				//lat + 0.0001 * i,lang + 0.0001 * i));
+			//player.GenerateMonster(i,Enemy.MonsterType.Dragon,GetPosition(1,10));
+		}
 	}
 }

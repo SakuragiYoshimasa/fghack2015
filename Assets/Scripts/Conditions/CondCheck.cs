@@ -18,35 +18,40 @@ public class CondCheck : CondBase
 
     public class R : CondBase.Response
     {
+        public bool Running;
+
         public List<EnemyInfo> EnemyList;
 
         public List<TeamInfo> TeamList;
 
-        public R(List<EnemyInfo> enemyList, List<TeamInfo> teamList, CondBase cond)
+        public R(bool running, List<EnemyInfo> enemyList, List<TeamInfo> teamList, CondBase cond)
             : base(cond)
         {
+            Running = running;
             EnemyList = enemyList;
             TeamList = teamList;
         }
     }
 
-    public bool Hit { get; private set; }
+    public string HitEnemyID { get; private set; }
+
+    public bool IsSuccessGesture { get; private set; }
 
     public int EnemyID { get; private set; }
 
-    public CondCheck(bool hit, int enemyID)
+    public CondCheck(string hitEnemyID, bool isSuccessGesture)
         : base(true, true)
     {
-        Hit = hit;
-        EnemyID = enemyID;
+        HitEnemyID = hitEnemyID;
+        IsSuccessGesture = isSuccessGesture;
     }
 
     protected override Dictionary<string, object> CreateParams()
     {
         return  new Dictionary<string, object>()
         {
-            { "hit", true },
-            { "enemyID", EnemyID }
+            { "hitEnemyID", HitEnemyID },
+            { "isSuccessGesture", IsSuccessGesture },
         };
     }
 }

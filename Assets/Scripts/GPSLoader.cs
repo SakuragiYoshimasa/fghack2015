@@ -21,17 +21,19 @@ public class GPSLoader : MonoBehaviour {
 			print("Unable to determine device location");
 			yield break;
 		} else {
+			while(true){
+				yield return new WaitForSeconds(0.5f);
+				Utils.lat =  (double)Mathf.Lerp((float)Utils.lat,Input.location.lastData.latitude,0.9f);
+				Utils.lang = (double)Mathf.Lerp((float)Utils.lang,Input.location.lastData.longitude,0.9f);
+				//Utils.alti = Input.location.lastData.altitude;
 
-			Utils.lat = Input.location.lastData.latitude;
-			Utils.lang = Input.location.lastData.longitude;
-			Utils.alti = Input.location.lastData.altitude;
-
-			 Debug.Log("Location: " + 
-			      Input.location.lastData.latitude + " " + 
-			      Input.location.lastData.longitude + " " + 
-			      Input.location.lastData.altitude + " " + 
-			      Input.location.lastData.horizontalAccuracy + " " + 
-			      Input.location.lastData.timestamp);
+				 Debug.Log("Location: " + 
+				      Input.location.lastData.latitude + " " + 
+				      Input.location.lastData.longitude + " " + 
+				      Input.location.lastData.altitude + " " + 
+				      Input.location.lastData.horizontalAccuracy + " " + 
+				      Input.location.lastData.timestamp);
+			}
 		}
 		Input.location.Stop();
 	}

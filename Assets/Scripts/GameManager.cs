@@ -40,11 +40,30 @@ public class GameManager : MonoBehaviour {
 
 	public GameObject cameraRenderer;
 
+	public GameObject zipper;
+	public GameObject goblin;
+	public GameObject dragon;
+
+	public GameObject camera;
+
+	public GameObject GetMonster(Enemy.MonsterType type){
+		switch(type){
+			case Enemy.MonsterType.Zipper:
+				return zipper;
+			case Enemy.MonsterType.Goblin:
+				return goblin;
+			case Enemy.MonsterType.Dragon:
+				return dragon;
+			default:
+				return zipper;
+		}
+	}
+
 	void Awake()
 	{
 		state = GameState.Register;
 		player = new Player();
-		player.Init();
+		player.Init(this);
 		Width = Screen.width;
 		Height = Screen.height;
 		DontDestroyOnLoad(gameObject);
@@ -126,14 +145,14 @@ public class GameManager : MonoBehaviour {
 		StartGame();
 	} 
 
-	private bool CheckStartGame(){
+	/*private bool CheckStartGame(){
 		return Utils.CheckStartGame();
-	}
+	}*/
 
 	private void StartGame(){
 		Debug.Log("started");
 		state = GameState.GameMode;
-		cameraRenderer.SetActive(true);
+		//cameraRenderer.SetActive(true);
 		var devices = WebCamTexture.devices;
 		if (devices.Length > 0)
 		{
@@ -152,8 +171,9 @@ public class GameManager : MonoBehaviour {
 	 IEnumerator Check(){
 		WaitForSeconds wait = new WaitForSeconds(2.0f);
 		while(state == GameState.GameMode){
-			Utils.Check(player,parse);
 			yield return wait;
+			Utils.Check(player,parse);
+		
 		}
 	}
 

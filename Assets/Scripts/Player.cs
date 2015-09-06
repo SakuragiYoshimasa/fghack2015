@@ -54,7 +54,7 @@ public class Player {
 
 		for(int i = 0; i < monsters.Length; i++){
 			if(monsters[i] != null && enemies[i] != null){
-				monsters[i].transform.position = Utils.GetPosition(Utils.lat,Utils.lang + 0.0001 * i);
+				monsters[i].transform.position = Utils.GetPosition(Utils.lat,Utils.lang + 0.0001f * i);
 					//new Vector3((float)enemies[i].X,0f,(float)enemies[i].Y);
 			}
 

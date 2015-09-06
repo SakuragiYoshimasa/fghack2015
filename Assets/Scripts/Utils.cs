@@ -3,8 +3,8 @@ using System.Collections;
 
 public static class Utils {
 
-	public static double lat = 0;
-	public static double lang = 0;
+	public static float lat = 0;
+	public static float lang = 0;
 	public static double alti = 0;
 
 	public static Type GetComponent<Type>(string name){
@@ -25,9 +25,9 @@ public static class Utils {
 		return false;
 	}*/
 
-	public static Vector3 GetPosition(double lat,double lon){
-		double x = lat * 111 * 1000;
-		double z = lon * 111 * 1000;
+	public static Vector3 GetPosition(float lat,float lon){
+		float x = lat * 111.000f * 1000.000f;
+		float z = lon * 111.000f * 1000.000f;
 		return new Vector3((float)x,0f,(float)z);
 	}
 
@@ -68,7 +68,7 @@ public static class Utils {
 		/// 
 		/// //35.665123,139.739511
 		for(int i = 0; i < 5; i++){
-			player.GenerateMonster(i,(Enemy.MonsterType)0,GetPosition(lat,lang + 0.0001 * i));
+			player.GenerateMonster(i,(Enemy.MonsterType)0,GetPosition(lat,lang + 0.0001f * i));
 				//lat + 0.0001 * i,lang + 0.0001 * i));
 			//player.GenerateMonster(i,Enemy.MonsterType.Dragon,GetPosition(1,10));
 		}
